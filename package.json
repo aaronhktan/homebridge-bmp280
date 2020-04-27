@@ -1,0 +1,36 @@
+{
+  "name": "homebridge-bmp280",
+  "version": "0.0.1",
+  "description": "A Homebridge plugin for the BMP280 temperature and pressure sensor.",
+  "private": true,
+  "gypfile": true,
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "fakegato-history": "^0.5.6",
+    "moment": "^2.4.0",
+    "mqtt": "^3.0.0",
+    "node-addon-api": "^1.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronhktan/homebridge-bmp280.git"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "homebridge": ">=0.2.0",
+    "node": ">=0.12.0"
+  },
+  "author": "Aaron Tan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronhktan/homebridge-bmp280/issues"
+  },
+  "homepage": "https://github.com/aaronhktan/homebridge-bmp280#readme"
+}
