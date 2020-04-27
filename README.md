@@ -4,6 +4,8 @@ This is a Homebridge plugin for BMP280 temperature and barometric pressure senso
 
 It communicates with the sensor using Linux's user-mode SPI API, spidev.
 
+<img src="/docs/eve.png?raw=true" style="margin: 5px"> <img src="/docs/home.png?raw=true" style="margin: 5px">
+
 ## Configuration
 
 | Field name           | Description                                                | Type / Unit    | Default value       | Required? |
