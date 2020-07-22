@@ -7,6 +7,7 @@ It communicates with the sensor using Linux's user-mode SPI API, spidev.
 <img src="/docs/eve.png?raw=true" style="margin: 5px"> <img src="/docs/home.png?raw=true" style="margin: 5px">
 
 ## Configuration
+**Before running this plugin, you must add the `homebridge` user to the `spi` group so Homebridge can access the SPI dev interface. `sudo adduser homebridge spi`**
 
 | Field name           | Description                                                | Type / Unit    | Default value       | Required? |
 | -------------------- |:-----------------------------------------------------------|:--------------:|:-------------------:|:---------:|
