@@ -206,9 +206,9 @@ int BMP280_measure(double *pressure_out,
   }
 
   // Read pressure data
-  uint8_t rx_hum[4];
-  read_bytes(spi_fd, BMP280_PRESS_MSB, rx_hum, 3);
-  int32_t p = (rx_hum[1] << 16 | rx_hum[2] << 8 | rx_hum[3]) >> 4;
+  uint8_t rx_pres[4];
+  read_bytes(spi_fd, BMP280_PRESS_MSB, rx_pres, 3);
+  int32_t p = (rx_pres[1] << 16 | rx_pres[2] << 8 | rx_pres[3]) >> 4;
   rv |= compensate_pressure(p, &pressure);
   if (rv) {
     debug_print(stderr, "%s\n", "Could not compensate pressure");
