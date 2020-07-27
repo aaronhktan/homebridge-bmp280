@@ -24,7 +24,7 @@ The mqttConfig object is **only required if enableMQTT is true**, and is defined
 | -------------------- |:-------------------------------------------------|:------------:|:-------------------:|:---------:|
 | url                  | URL of the MQTT server, must start with mqtt://  | string       | —                   | Y         |
 | temperatureTopic     | MQTT topic to which temperature data is sent     | string       | bmp280/temeprature  | N         |
-| pressureTopic        | MQTT topic to which pressure data is sent        | string       | bmp280/humidity     | N         |
+| pressureTopic        | MQTT topic to which pressure data is sent        | string       | bmp280/pressure     | N         |
 
 ### Example Configuration
 
