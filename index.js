@@ -28,13 +28,14 @@ function BMP280Accessory(log, config) {
   this.mqttConfig = config['mqtt'];
 
   // Internal variables to keep track of current temperature and pressure
-  this._pressure = null;
-  this._temperature = null;
+  this._currentPressure = null;
   this._pressureSamples = [];
-  this._temperatureSamples = [];
   this._pressureCumSum = 0;
-  this._temperatureCumSum = 0;
   this._pressureCounter = 0;
+
+  this._currentTemperature = null;
+  this._temperatureSamples = [];
+  this._temperatureCumSum = 0;
   this._temperatureCounter = 0;
 
   // Services
@@ -105,7 +106,7 @@ Object.defineProperty(BMP280Accessory.prototype, "pressure", {
   },
 
   get: function() {
-    return this._currentTemperature;
+    return this._currentPressure;
   }
 });
 
@@ -143,7 +144,7 @@ Object.defineProperty(BMP280Accessory.prototype, "temperature", {
   },
 
   get: function() {
-    return this._currentTVOC;
+    return this._currentTemperature;
   }
 });
 
