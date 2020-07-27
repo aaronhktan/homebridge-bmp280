@@ -182,7 +182,7 @@ BMP280Accessory.prototype.publishToMQTT = function(topic, value) {
   this.mqttClient.publish(topic, String(value));
 }
 
-// Set up sensor; checks that I2C interface is available and device is ready
+// Set up sensor; checks that SPI interface is available and device is ready
 BMP280Accessory.prototype.setupBMP280 = function() {
   data = BMP280.init(this.spidevInterface);
   if (data.hasOwnProperty('errcode')) {
